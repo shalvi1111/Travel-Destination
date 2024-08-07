@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        .form-control{
+            width: 40rem; 
+        }
+    </style>
+</head> -->
+
+   <% layout("/layouts/boilerplate") %>
+   
+<body>
+      <br><br>
+     
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1>Create New Listing</h1>
+    <form method="POST" action="/listings" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <lable for="title" ><b>Title</b> </lable>
+        <input name="listing[title]" type="text" class="form-control" placeholder="Enter title"required >
+         <div class="invalid-feedback"> Please enter a titile name</div>   
+         
+      </div>
+          <br><br>
+
+          <div class="mb-3">
+            <lable for="description" > <b>Description</b></lable>
+        <textarea  name="listing[description]"class="form-control"  placeholder="Enter Description" required></textarea>
+          <div class="invalid-feedback" >Please enter a description</div>
+      </div>
+        <br><br>
+
+        <div class="mb-3">
+            <lable for="image" >  <b>Image Link/URL</b> </lable>
+        <input  name="listing[image]" type="text" class="form-control" id="basic-url" placeholder="Enter image link/url"  value="https://i.ibb.co/4JZw7GW/tomas-malik-T0wFCn026Q8-unsplash" />
+         <div class="valid-feedback">Your link is valid </div>
+        </div>
+        <br><br>
+
+          
+        <div class="row">
+        <div class="mb-3 col-md-4">
+        <lable for="price" ><b>Price</b> </lable>
+        <input  name="listing[price]"  class="form-control" placeholder=" Enter price" required>
+        <div class="valid-feedback">Looks good</div>
+       </div>
+       <br><br>
+
+          <div class="mb-3 col-md-8">
+            <lable for="country" ><b>Country</b> </lable>   
+        <input  name="listing[country]" type="text" class="form-control" placeholder="Enter country" required >
+         <div class="invalid-feedback">Enter a vslid country name</div>
+           </div>
+           <br><br>
+        </div>
+
+           <div class="mb-3">
+            <lable for="location" > <b>Location</b></lable>
+           <input  name="listing[location]" type="text" class="form-control" placeholder="Enter location" required >
+             <div class="invalid-feedback">Enter a valid location</div>
+            </div>
+            <br><br>
+         <button   type="submit" class="btn ">Add</button>
+         <br><br>
+    </form>
+  </div>
+</div>
+
+ 
+</body>
+<!-- </html> -->

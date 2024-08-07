@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head> -->
+   <% layout("/layouts/boilerplate") %>
+
+<body>  
+     <br><br>
+        <div class="row">
+           
+      <h1> Edit your Listings</h1>
+       <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate>
+           <div>
+          <label for="title"><b>Title</b></label>
+        <input name="listing[title]" type="text" class="form-control" value="<%= listing.title %>"  required>
+        <div class="valid-feedback">Title looks good</div>
+       </div>
+        <br>
+        <div>
+         <label for="description"><b>Description</b></label>
+        <textarea  name="listing[description]" class="form-control"  required><%= listing.description %> </textarea>
+         <div class="invalid-feedback">Enter some description</div>  
+      </div>
+        <br>
+        <div>
+         <label for="image"><b>Image Link/URL</b></label>
+        <input  name="listing[image]" type="text" class="form-control" id="basic-url" value="<%= listing.image %>" required/>
+         <div class="invalid-feedback">Please enter a valid link</div>  
+      </div>
+        <br>
+        <div>
+         <label for="price"><b>Price</b></label>
+        <input  name="listing[price]"  class="form-control" value="<%= listing.price %>" required >
+          <div class="invalid-feedback">Enter some prics</div>
+      </div> 
+        <br>
+        <div>
+         <label for="location"><b>Location</b></label>
+          <input  name="listing[location]" type="text" class="form-control" value="<%= listing.location %>" required >
+           <div class="invalid-feedback">Enter a valid location</div> 
+        </div>
+          <br>
+          <div>
+            <label for="country"><b>Country</b></label>
+          <input  name="listing[country]" type="text" class="form-control" value="<%= listing.country %>"required >
+           <div class="invalid-feedback">Enter a valid country</div>  
+        </div>
+          <br>
+          <button   type="submit" class="btn btn-success">Submit to edit</button>
+          <br><br>
+        </form>
+
+        </div>
+       
+</body>
+<!-- </html> -->
